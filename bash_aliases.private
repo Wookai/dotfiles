@@ -1,3 +1,1 @@
-alias icsil1='ssh vetter@icsil1-prj-01.epfl.ch'
-alias twitter='ssh twitter@icsil1-prj-01.epfl.ch'
-alias hadoop='ssh ix-student1.epfl.ch'
+# put here commands that are local to the machine and not part of the repo
