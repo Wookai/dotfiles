@@ -1,6 +1,6 @@
 # get script real directory for sourcing private aliases
 SCRIPTFILE=$0
-if [ "${SCRIPTFILE}" = "bash" ] ;
+if [ "${SCRIPTFILE}" = "bash" ] || [ "${SCRIPTFILE}" = "-bash" ] ;
 then
     SCRIPTFILE=${BASH_ARGV[0]}
 fi
