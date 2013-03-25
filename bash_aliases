@@ -27,8 +27,17 @@ ffs () { /usr/bin/find . -name "$@"'*' ; }
 # # ffe: to find a file whose name ends with a given string
 ffe () { /usr/bin/find . -name '*'"$@" ; }
 
+# show colored outputs correctly in less
+alias less='less -r'
+
+# trim image
+trim() { /usr/bin/convert $1 -trim $1 ; }
+
 # svn helpers
-alias svnaddnew='svn status | grep ? | awk "{print $2}"'
+alias svnaddnew='svn status | grep ? | awk "{print \$2}" | xargs svn add'
+
+# git helpers
+alias gitaddnew='git status -s | grep ?? | awk "{print \$2}" | xargs git add'
 
 # include 'private' aliases if file exists
 PRIVATEFILE="$SCRIPTDIR/bash_aliases.private"
