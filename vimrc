@@ -51,5 +51,8 @@ set nu
 " set term title
 set title
 
+" disable folding in markdown
+let g:vim_markdown_folding_disabled=1
+
 " automatically load templates for new files
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/tmpl.%:e
