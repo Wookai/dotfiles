@@ -31,7 +31,11 @@ ffe () { /usr/bin/find . -name '*'"$@" ; }
 alias less='less -r'
 
 # trim image
-trim() { /usr/bin/convert $1 -trim $1 ; }
+trim() {
+for var in "$@"
+do
+    /usr/bin/convert $var -trim $var;
+done }
 
 # svn helpers
 alias svnaddnew='svn status | grep ? | awk "{print \$2}" | xargs svn add'
