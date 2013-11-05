@@ -1,12 +1,3 @@
-# get script real directory for sourcing private aliases
-SCRIPTFILE=$0
-if [ "${SCRIPTFILE}" = "bash" ] || [ "${SCRIPTFILE}" = "-bash" ] ;
-then
-    SCRIPTFILE=${BASH_ARGV[0]}
-fi
-SCRIPTPATH=`realpath $SCRIPTFILE`
-SCRIPTDIR=`dirname $SCRIPTPATH`
-
 # colorized commands
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -44,8 +35,8 @@ alias svnaddnew='svn status | grep ? | awk "{print \$2}" | xargs svn add'
 alias gitaddnew='git status -s | grep ?? | awk "{print \$2}" | xargs git add'
 
 # include 'private' aliases if file exists
-PRIVATEFILE="$SCRIPTDIR/bash_aliases.private"
+PRIVATEFILE="$HOME/.bash_aliases_private"
 if [ -f $PRIVATEFILE ];
 then
-    source "$SCRIPTDIR/bash_aliases.private"
+    source $PRIVATEFILE
 fi
