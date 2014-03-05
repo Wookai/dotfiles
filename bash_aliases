@@ -30,6 +30,8 @@ done }
 
 # svn helpers
 alias svnaddnew='svn status | grep ? | awk "{print \$2}" | xargs svn add'
+alias svnrmmissing='svn status | grep ! | awk "{print \$2}" | xargs svn rm'
+
 
 # git helpers
 alias gitaddnew='git status -s | grep ?? | awk "{print \$2}" | xargs git add'
