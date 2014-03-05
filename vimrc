@@ -56,3 +56,19 @@ let g:vim_markdown_folding_disabled=1
 
 " automatically load templates for new files
 autocmd! BufNewFile * silent! 0r ~/.vim/skel/tmpl.%:e
+
+" open splits right and below
+set splitbelow
+set splitright
+
+execute pathogen#infect()
+
+" highlight whitespaces
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+" remove trailing whitespaces from py files
+autocmd BufWritePre *.py :%s/\s\+$//e
+
+" run Flake8 when saving python files
+autocmd BufWritePost *.py call Flake8()
