@@ -9,3 +9,5 @@
     st = status -s
     sth = status -s .
     hist = log --pretty=format:\"%h %Cred%ad%Creset |%Cblue%d%Creset %s %Cgreen[%an]%Creset\" --graph --all --date=relative
+[push]
+	default = simple
