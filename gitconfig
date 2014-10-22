@@ -1,6 +1,6 @@
 [user]
 	name = Vincent Etter
-	email = vincent.etter@gmail.com
+	email = vincent@etter.io
 [credential]
 	helper = cache --timeout=86400
 [color]
