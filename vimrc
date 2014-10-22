@@ -10,8 +10,8 @@ filetype plugin indent on
 " show matching braces
 set showmatch
 
-" replaces tabs with spaces
-set expandtab
+" do not replaces tabs with spaces
+set noexpandtab
 
 " tab sizes
 set ts=4
@@ -64,7 +64,6 @@ set splitright
 execute pathogen#infect()
 
 " highlight whitespaces
-set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 " remove trailing whitespaces from py files
@@ -72,3 +71,13 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 
 " run Flake8 when saving python files
 autocmd BufWritePost *.py call Flake8()
+
+" highlight WSGI files like python
+au BufNewFile,BufRead *.wsgi set filetype=python
+
+" use tabs for javascript and HTML, disable whitespace highlights
+autocmd Filetype javascript setlocal ts=4 sts=4 sw=4  listchars&
+autocmd Filetype html setlocal ts=4 sts=4 sw=4 listchars&
+
+" replace tabs with spaces in python
+autocmd Filetype python setlocal expandtab
