@@ -1,0 +1,11 @@
+[user]
+	name = Vincent Etter
+	email = vincent.etter@gmail.com
+[credential]
+	helper = cache --timeout=86400
+[color]
+	ui = auto
+[alias]
+    st = status -s
+    sth = status -s .
+    hist = log --pretty=format:\"%h %Cred%ad%Creset |%Cblue%d%Creset %s %Cgreen[%an]%Creset\" --graph --all --date=relative
