@@ -59,5 +59,8 @@ fi
 # show git status
 export GIT_PS1_SHOWDIRTYSTATE=1
 
+# set SVN editor
+export SVN_EDITOR=vim
+
 # custom prompt
 PS1="\n\[\033[35m\]\t\[\033[m\] \[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\[\033[36m\]\$(__git_ps1)\[\033[m\] \$\n"
