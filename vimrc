@@ -69,9 +69,6 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 " remove trailing whitespaces from py files
 autocmd BufWritePre *.py :%s/\s\+$//e
 
-" run Flake8 when saving python files
-autocmd BufWritePost *.py call Flake8()
-
 " highlight WSGI files like python
 au BufNewFile,BufRead *.wsgi set filetype=python
 
@@ -81,3 +78,6 @@ autocmd Filetype html setlocal ts=4 sts=4 sw=4 listchars&
 
 " replace tabs with spaces in python
 autocmd Filetype python setlocal expandtab
+
+" automatically show location list when there are errors
+let g:syntastic_auto_loc_list=1
