@@ -15,3 +15,4 @@ ln -s "$DOTDIR/bashrc" .bashrc
 ln -s "$DOTDIR/screenrc" .screenrc
 ln -s "$DOTDIR/vimrc" .vimrc
 ln -s "$DOTDIR/gitconfig" .gitconfig
+ln -s "$DOTDIR/gitattributes" .gitattributes

@@ -51,10 +51,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# private PATH seetings
+# private PATH settings
 if [ -f ~/.bashrc_private ]; then
     . ~/.bashrc_private
 fi
+
+export PATH=$PATH:${HOME}/.dotfiles/bin
 
 # show git status
 export GIT_PS1_SHOWDIRTYSTATE=1
